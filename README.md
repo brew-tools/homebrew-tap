@@ -1,4 +1,4 @@
-# homebrew-tab
+# homebrew-tap
 
 Homebrew formulas for installing apps & tools.
 
@@ -10,10 +10,16 @@ Add repository:
 brew tap brew-tools/tap
 ```
 
-Install an formula:
+Install a formula:
 
 ```sh
 brew install <formula>
+```
+
+Upgrade:
+
+```sh
+brew upgrade <formula>
 ```
 
 ## Available Formulas
