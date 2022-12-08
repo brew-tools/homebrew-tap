@@ -5,20 +5,20 @@
 class Gotouch < Formula
   desc "customizable project creator"
   homepage "https://denizgursoy.github.io/gotouch/"
-  version "1.6.0"
+  version "1.7.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.6.0/gotouch_1.6.0_Darwin_arm64.tar.gz"
-      sha256 "e4865946377835ef0aa277881c9517d716e8b2032c2951a1fa35ddddee5921e8"
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.0/gotouch_1.7.0_Darwin_arm64.tar.gz"
+      sha256 "9db2efa8e3ebb80bf0a9ee792f3981c27f7ca6ccd937267f6dae6843f2b2a807"
 
       def install
         bin.install "gotouch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.6.0/gotouch_1.6.0_Darwin_x86_64.tar.gz"
-      sha256 "edb4f31ea871cc1aa0f5f4164f5b46a4255f9d24ea37adc4d6ee703fd3511fe0"
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.0/gotouch_1.7.0_Darwin_x86_64.tar.gz"
+      sha256 "d2039e83f069d12b448cb9e6d825817ccb939edeb1002b6e92cc679a139e2040"
 
       def install
         bin.install "gotouch"
@@ -27,17 +27,17 @@ class Gotouch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.6.0/gotouch_1.6.0_Linux_x86_64.tar.gz"
-      sha256 "2b72a4368c04e3e3ef05db585e01b29c6a6d099cb63d17008ab1eb06ebbecb42"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.0/gotouch_1.7.0_Linux_arm64.tar.gz"
+      sha256 "db02a48dac7030950f813d7ec880abe51d7749348af24e1d857f109254e4ca72"
 
       def install
         bin.install "gotouch"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.6.0/gotouch_1.6.0_Linux_arm64.tar.gz"
-      sha256 "cec496896c95c51a9429614e4ad9962dc0b9dad355a6ecd16d62b720d68fd535"
+    if Hardware::CPU.intel?
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.0/gotouch_1.7.0_Linux_x86_64.tar.gz"
+      sha256 "39011a071d2a7c8ca9f0752cd576e5fb26425980403e0acab812f3cfa15d4d35"
 
       def install
         bin.install "gotouch"
