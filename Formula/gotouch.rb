@@ -5,20 +5,20 @@
 class Gotouch < Formula
   desc "customizable project creator"
   homepage "https://denizgursoy.github.io/gotouch/"
-  version "1.7.6"
+  version "1.8.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.6/gotouch_1.7.6_Darwin_arm64.tar.gz"
-      sha256 "1f7475eec88b10e2742904d8a52a87e62c429a4c9c2a9f0415b9a68f66f3c083"
+    if Hardware::CPU.intel?
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.8.0/gotouch_1.8.0_Darwin_x86_64.tar.gz"
+      sha256 "6308da34151fd6f2925ce43ca791f14617125c42a38121e5477f4f9c48282ec7"
 
       def install
         bin.install "gotouch"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.6/gotouch_1.7.6_Darwin_x86_64.tar.gz"
-      sha256 "910dacc6a620e0f1955d60715d1cbde32f7f5dfd4dd36e42e3aee5e0c888cd58"
+    if Hardware::CPU.arm?
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.8.0/gotouch_1.8.0_Darwin_arm64.tar.gz"
+      sha256 "d71f9e82a1886cb06a9a1716e7159c27b541a2af66ff99370b1c2f86dd84ec1b"
 
       def install
         bin.install "gotouch"
@@ -27,17 +27,17 @@ class Gotouch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.6/gotouch_1.7.6_Linux_x86_64.tar.gz"
-      sha256 "1bb7727b49e9b9eba9930413972d38f7d746d29b3d9d8ec4690a936b6b3fefd9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.8.0/gotouch_1.8.0_Linux_arm64.tar.gz"
+      sha256 "e472623a31e695521763e6b09a97297db29f81adbf7207e3ee4bac5d1373b647"
 
       def install
         bin.install "gotouch"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/denizgursoy/gotouch/releases/download/v1.7.6/gotouch_1.7.6_Linux_arm64.tar.gz"
-      sha256 "ae5cecbd89ad5f056d8e99ea6f65afa790e679016f888f18c2c998cf2c7efd46"
+    if Hardware::CPU.intel?
+      url "https://github.com/denizgursoy/gotouch/releases/download/v1.8.0/gotouch_1.8.0_Linux_x86_64.tar.gz"
+      sha256 "53a9d7b9ec5da22c22de87be1b8ae1a69820a2ec131c149251a043d99b558554"
 
       def install
         bin.install "gotouch"
