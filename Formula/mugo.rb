@@ -5,20 +5,20 @@
 class Mugo < Formula
   desc "go template executor"
   homepage "https://github.com/rytsh/mugo"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rytsh/mugo/releases/download/v0.4.0/mugo_Darwin_arm64.tar.gz"
-      sha256 "2486de7a172ba4e3b281f0beaffe44ef47c819fb46f040dc3c5b8213d3567832"
+    if Hardware::CPU.intel?
+      url "https://github.com/rytsh/mugo/releases/download/v0.4.1/mugo_Darwin_x86_64.tar.gz"
+      sha256 "b774b2f13c1ac69994413fe3c2a23c613c3cfadd5dfb131e1f8dd5b8beb300c8"
 
       def install
         bin.install "mugo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rytsh/mugo/releases/download/v0.4.0/mugo_Darwin_x86_64.tar.gz"
-      sha256 "334e9314b94b0d35c9225e1e374a2414d14dcc399c2b71612053f7bfd4f07c47"
+    if Hardware::CPU.arm?
+      url "https://github.com/rytsh/mugo/releases/download/v0.4.1/mugo_Darwin_arm64.tar.gz"
+      sha256 "8a7a1a1b8ac77cead613916458bd7a08499ec15052dd76ed30ea218794d9de98"
 
       def install
         bin.install "mugo"
@@ -27,25 +27,25 @@ class Mugo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/rytsh/mugo/releases/download/v0.4.0/mugo_Linux_armv6.tar.gz"
-      sha256 "d02e72859751da418ee16567f8b81100e9e6e48610a795b18607f029593fb5eb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rytsh/mugo/releases/download/v0.4.1/mugo_Linux_arm64.tar.gz"
+      sha256 "4cd1d86f2aa55d6fc53520a7a33348ff4d2f6188d8ce6bd62576031a03b65334"
 
       def install
         bin.install "mugo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rytsh/mugo/releases/download/v0.4.0/mugo_Linux_x86_64.tar.gz"
-      sha256 "da7b2592ebcad7496c5f1479d74b1dd18108b30cb4cd08768ef253d4b7c68d97"
+      url "https://github.com/rytsh/mugo/releases/download/v0.4.1/mugo_Linux_x86_64.tar.gz"
+      sha256 "912c1948943cb35cc16465bdaa971de20dd495aaadfe43e6ada08e24b98e7385"
 
       def install
         bin.install "mugo"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rytsh/mugo/releases/download/v0.4.0/mugo_Linux_arm64.tar.gz"
-      sha256 "51f5f28a71e9fbe21749ba9a2502d0ea9028c32d6daff2421462d4d498d1187b"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/rytsh/mugo/releases/download/v0.4.1/mugo_Linux_armv6.tar.gz"
+      sha256 "20a89df69d7f8bb853ea25807de22eecb22c95258bb1684455c52e73b7bb04ff"
 
       def install
         bin.install "mugo"
