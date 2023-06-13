@@ -5,20 +5,20 @@
 class Fine < Formula
   desc "file management service"
   homepage "https://github.com/rytsh/fine"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rytsh/fine/releases/download/v0.1.0/fine_Darwin_x86_64.tar.gz"
-      sha256 "2069dfa66cbd5d2f79b8ba355eedafd167aa9238de4440e3763e545b76cd660f"
+      url "https://github.com/rytsh/fine/releases/download/v0.1.1/fine_Darwin_x86_64.tar.gz"
+      sha256 "68503d913fc268747a80eda69700b4231a083d7c5051fcd6ee109be6e1bce74b"
 
       def install
         bin.install "fine"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rytsh/fine/releases/download/v0.1.0/fine_Darwin_arm64.tar.gz"
-      sha256 "e2045b6320f7111d54d475ec5c4bbb8843ce40c5ca1dfaaa15c0a6c157aa7ca7"
+      url "https://github.com/rytsh/fine/releases/download/v0.1.1/fine_Darwin_arm64.tar.gz"
+      sha256 "8f2906662541f5c9aa1b89753fdd6f6364deab42844788b222412920adb391c7"
 
       def install
         bin.install "fine"
@@ -28,24 +28,24 @@ class Fine < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/rytsh/fine/releases/download/v0.1.0/fine_Linux_arm.tar.gz"
-      sha256 "d12ca4be922631ab41f128731c27d7758d0348eb592ae0359cfadf2fc2e57744"
+      url "https://github.com/rytsh/fine/releases/download/v0.1.1/fine_Linux_arm.tar.gz"
+      sha256 "19929b1413e2528504efea72df6836a97dbf0fbed3ca6efd56317cfbbbe5922f"
 
       def install
         bin.install "fine"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rytsh/fine/releases/download/v0.1.0/fine_Linux_x86_64.tar.gz"
-      sha256 "0578ca45f275098ebc0698b3e066f5e84370299482262b3c75df6b69b06359e2"
+      url "https://github.com/rytsh/fine/releases/download/v0.1.1/fine_Linux_x86_64.tar.gz"
+      sha256 "5ee146ca3a10e1ea756db82fe52258e907bfc3a5af1c37b23304a66cad33ca6e"
 
       def install
         bin.install "fine"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rytsh/fine/releases/download/v0.1.0/fine_Linux_arm64.tar.gz"
-      sha256 "aeeae2a2fae468a14036cca6c8bd49c3749b4a15b25d5ab2b17f30ba9379b982"
+      url "https://github.com/rytsh/fine/releases/download/v0.1.1/fine_Linux_arm64.tar.gz"
+      sha256 "f650e61bf4039393660fe2dccf1b4328071124d4d2db9770c9cec4aa9ab1cd35"
 
       def install
         bin.install "fine"
