@@ -5,20 +5,20 @@
 class Turna < Formula
   desc "swiss knife for services"
   homepage "https://github.com/rakunlabs/turna"
-  version "0.7.6"
+  version "0.7.7"
 
   on_macos do
     on_intel do
-      url "https://github.com/rakunlabs/turna/releases/download/v0.7.6/turna_Darwin_x86_64.tar.gz"
-      sha256 "ecaa538bf9070a361e734628574287c533aa93488727c7c578c69d6f1e663021"
+      url "https://github.com/rakunlabs/turna/releases/download/v0.7.7/turna_Darwin_x86_64.tar.gz"
+      sha256 "84547cb7fab42bda1ebefb6b913d31dd462be69ee6549e8fcbc2574cc9c9b05d"
 
       def install
         bin.install "turna"
       end
     end
     on_arm do
-      url "https://github.com/rakunlabs/turna/releases/download/v0.7.6/turna_Darwin_arm64.tar.gz"
-      sha256 "0e71c80f0cf5aadd4d93d1c3a7bb406b90f349b928271a2009179ccf9d814af0"
+      url "https://github.com/rakunlabs/turna/releases/download/v0.7.7/turna_Darwin_arm64.tar.gz"
+      sha256 "1e42de99d394a04b19966de4de0e721b1a0f25cca12c60b02222b408438f9f0e"
 
       def install
         bin.install "turna"
@@ -29,8 +29,8 @@ class Turna < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rakunlabs/turna/releases/download/v0.7.6/turna_Linux_x86_64.tar.gz"
-        sha256 "0683772a117a9966651b148a727e6d14ffb1470e74833986c327ecf6066ba706"
+        url "https://github.com/rakunlabs/turna/releases/download/v0.7.7/turna_Linux_x86_64.tar.gz"
+        sha256 "061bedafc2c4141f4aa0fb94c435fd8c6f045c016df3be9606c5750c25583c5e"
 
         def install
           bin.install "turna"
@@ -39,8 +39,8 @@ class Turna < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/rakunlabs/turna/releases/download/v0.7.6/turna_Linux_armv6.tar.gz"
-        sha256 "4100f94c79a4d246086a628becf634424a7cdc7895ddfc0ea4bc40c10313e085"
+        url "https://github.com/rakunlabs/turna/releases/download/v0.7.7/turna_Linux_armv6.tar.gz"
+        sha256 "da46b1ae7fc296f44f3b13bb4d9c6276e20c3bb22e85f6fc9681f1b765dfea22"
 
         def install
           bin.install "turna"
@@ -49,8 +49,8 @@ class Turna < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rakunlabs/turna/releases/download/v0.7.6/turna_Linux_arm64.tar.gz"
-        sha256 "d00886f2d0a16a780769d5b6c413181a2d63dae30d6e6686f64c6c6897081ca3"
+        url "https://github.com/rakunlabs/turna/releases/download/v0.7.7/turna_Linux_arm64.tar.gz"
+        sha256 "39a8cba163870d92eaead8d5c674a748d0faf911b593b7166200ea420bf73adf"
 
         def install
           bin.install "turna"
