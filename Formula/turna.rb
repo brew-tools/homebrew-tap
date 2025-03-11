@@ -5,20 +5,20 @@
 class Turna < Formula
   desc "swiss knife for services"
   homepage "https://github.com/worldline-go/turna"
-  version "0.8.6"
+  version "0.8.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/worldline-go/turna/releases/download/v0.8.6/turna_Darwin_x86_64.tar.gz"
-      sha256 "c1a4db6e3aea3e2b0fae98876572b0963cb391145746d22eb62283a2f9cf38b6"
+      url "https://github.com/worldline-go/turna/releases/download/v0.8.7/turna_Darwin_x86_64.tar.gz"
+      sha256 "6440e9557002352e67df479beff4f52c91ca333d7004b3b90b07a4bcff0e91a4"
 
       def install
         bin.install "turna"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/worldline-go/turna/releases/download/v0.8.6/turna_Darwin_arm64.tar.gz"
-      sha256 "d7b0985e02106b069b429ca8d988908ec7089a94217d862b8c6f45399dd65c10"
+      url "https://github.com/worldline-go/turna/releases/download/v0.8.7/turna_Darwin_arm64.tar.gz"
+      sha256 "cf8d342cd78437b54a31c88e22fb9b77c0cacb52c61b28695842c587617d2bb0"
 
       def install
         bin.install "turna"
@@ -29,8 +29,8 @@ class Turna < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/worldline-go/turna/releases/download/v0.8.6/turna_Linux_x86_64.tar.gz"
-        sha256 "4c6251f327122bec77bdee0de5f663d471f58e4292001f436d02030391d98226"
+        url "https://github.com/worldline-go/turna/releases/download/v0.8.7/turna_Linux_x86_64.tar.gz"
+        sha256 "8cae1f52c128b3c85ec46e49de4e0244fe1e6fcc49e14c45f2c6e8f5740d725e"
 
         def install
           bin.install "turna"
@@ -39,8 +39,8 @@ class Turna < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/worldline-go/turna/releases/download/v0.8.6/turna_Linux_armv6.tar.gz"
-        sha256 "ff3d981c82be64833e1b4c11029a4e1dcc188f133309a080f97b39a1aaf17be1"
+        url "https://github.com/worldline-go/turna/releases/download/v0.8.7/turna_Linux_armv6.tar.gz"
+        sha256 "deceb3cfd21b9a48f0cde43ea1e6a47d1e93f978b21f22e8660b88b581cabb8d"
 
         def install
           bin.install "turna"
@@ -49,8 +49,8 @@ class Turna < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/worldline-go/turna/releases/download/v0.8.6/turna_Linux_arm64.tar.gz"
-        sha256 "87105066527bf2450fc38dbb7c2ce94fa7a59e1e3da2aa5161ad8932b6ce6d3b"
+        url "https://github.com/worldline-go/turna/releases/download/v0.8.7/turna_Linux_arm64.tar.gz"
+        sha256 "67d23a08dcfd633523fcd2f43434c85c66c416251e011e234ecb36451cf1df59"
 
         def install
           bin.install "turna"
