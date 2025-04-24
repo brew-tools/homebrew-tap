@@ -5,20 +5,20 @@
 class Calendar < Formula
   desc "swiss knife for services"
   homepage "https://github.com/worldline-go/calendar"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/worldline-go/calendar/releases/download/v0.1.3/calendar_Darwin_x86_64.tar.gz"
-      sha256 "d0dd7d49c1e03c1b88dc33210780c27df2d659ecdded85a7d563ea2c62a8a448"
+      url "https://github.com/worldline-go/calendar/releases/download/v0.1.4/calendar_Darwin_x86_64.tar.gz"
+      sha256 "c008835c806e96e7155ec1253dae88d74fbbcba1c0b23c9b06575eb0d1da0d68"
 
       def install
         bin.install "calendar"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/worldline-go/calendar/releases/download/v0.1.3/calendar_Darwin_arm64.tar.gz"
-      sha256 "de3de5843ac71a8e7b0d9fd39037ddee32b6f6b47e586f162beec7bd460f3af5"
+      url "https://github.com/worldline-go/calendar/releases/download/v0.1.4/calendar_Darwin_arm64.tar.gz"
+      sha256 "11157bf2b62b54abc6f17e723aa66a388390cb9888b0cf2d53798737218b0222"
 
       def install
         bin.install "calendar"
@@ -29,8 +29,8 @@ class Calendar < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/worldline-go/calendar/releases/download/v0.1.3/calendar_Linux_x86_64.tar.gz"
-        sha256 "c6d06b8f1b9f87659d5a7ab96c0a0adc06dfe42d1b43ea25e498f76347049a3d"
+        url "https://github.com/worldline-go/calendar/releases/download/v0.1.4/calendar_Linux_x86_64.tar.gz"
+        sha256 "1e093f65db867882fbec5f76bda63f634d4a443d3030661c9b31bee0b14aabd7"
 
         def install
           bin.install "calendar"
@@ -39,8 +39,8 @@ class Calendar < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/worldline-go/calendar/releases/download/v0.1.3/calendar_Linux_armv6.tar.gz"
-        sha256 "14ca8a4eab7800dd2791d1638b374701ba0195b0613171f5f6c21f3bfc9886df"
+        url "https://github.com/worldline-go/calendar/releases/download/v0.1.4/calendar_Linux_armv6.tar.gz"
+        sha256 "77c66109c3032a4c361afd60f2695f1649d275f86f589a142f13587632788715"
 
         def install
           bin.install "calendar"
@@ -49,8 +49,8 @@ class Calendar < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/worldline-go/calendar/releases/download/v0.1.3/calendar_Linux_arm64.tar.gz"
-        sha256 "dd044f78b1e4e7598e708f97fac9c81cc047ee7a135229b9077507f7bf47381d"
+        url "https://github.com/worldline-go/calendar/releases/download/v0.1.4/calendar_Linux_arm64.tar.gz"
+        sha256 "e5c0522d92e951add88642a4565c9b286bf770be7e09d50e712c057db7fe1a00"
 
         def install
           bin.install "calendar"
